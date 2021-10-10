@@ -11,9 +11,7 @@ module.exports.addTodo = async (req, res) => {
 module.exports.getTodo = async (req, res) => {
   try {
     const response = await todoService.getTodo();
-    // res.status(200).send(response);
-
-    res.send("test");
+    res.status(200).send(response);
   } catch (error) {
     console.log(`error: ${error}`);
   }
